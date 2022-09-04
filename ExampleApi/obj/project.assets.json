@@ -2063,20 +2063,26 @@
     ]
   },
   "packageFolders": {
-    "/home/ubuntu/.nuget/packages/": {}
+    "/home/damian/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ubuntu/Documents/Projects/aa.React_Workspace/server/ExampleApi/ExampleApi/ExampleApi.csproj",
+      "projectUniqueName": "/home/damian/Documents/Projects/aa.WorksopsTmp/app/server/ExampleApi/ExampleApi/ExampleApi.csproj",
       "projectName": "ExampleApi",
-      "projectPath": "/home/ubuntu/Documents/Projects/aa.React_Workspace/server/ExampleApi/ExampleApi/ExampleApi.csproj",
-      "packagesPath": "/home/ubuntu/.nuget/packages/",
-      "outputPath": "/home/ubuntu/Documents/Projects/aa.React_Workspace/server/ExampleApi/ExampleApi/obj/",
+      "projectPath": "/home/damian/Documents/Projects/aa.WorksopsTmp/app/server/ExampleApi/ExampleApi/ExampleApi.csproj",
+      "packagesPath": "/home/damian/.nuget/packages/",
+      "outputPath": "/home/damian/Documents/Projects/aa.WorksopsTmp/app/server/ExampleApi/ExampleApi/obj/",
       "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/damian/.nuget/NuGet/NuGet.Config"
+      ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
@@ -2136,7 +2142,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }
