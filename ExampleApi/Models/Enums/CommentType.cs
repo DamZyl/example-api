@@ -1,11 +1,11 @@
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace ExampleApi.Models.Enums;
 
-public enum CommentType : int
+public enum CommentType
 {
-    [Display(Name = "Pozytywny")]
+    [Description("Pozytywny")]
     Positive = 0,
-    [Display(Name = "Negatywny")]
+    [Description("Negatywny")]
     Negative
 }

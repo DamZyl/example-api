@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/damian/Documents/Projects/aa.WorksopsTmp/app/server/ExampleApi/ExampleApi/ExampleApi.csproj": {}
+    "/Users/damian/Documents/Workshops/example-api/ExampleApi/ExampleApi.csproj": {}
   },
   "projects": {
-    "/home/damian/Documents/Projects/aa.WorksopsTmp/app/server/ExampleApi/ExampleApi/ExampleApi.csproj": {
+    "/Users/damian/Documents/Workshops/example-api/ExampleApi/ExampleApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/damian/Documents/Projects/aa.WorksopsTmp/app/server/ExampleApi/ExampleApi/ExampleApi.csproj",
+        "projectUniqueName": "/Users/damian/Documents/Workshops/example-api/ExampleApi/ExampleApi.csproj",
         "projectName": "ExampleApi",
-        "projectPath": "/home/damian/Documents/Projects/aa.WorksopsTmp/app/server/ExampleApi/ExampleApi/ExampleApi.csproj",
-        "packagesPath": "/home/damian/.nuget/packages/",
-        "outputPath": "/home/damian/Documents/Projects/aa.WorksopsTmp/app/server/ExampleApi/ExampleApi/obj/",
+        "projectPath": "/Users/damian/Documents/Workshops/example-api/ExampleApi/ExampleApi.csproj",
+        "packagesPath": "/Users/damian/.nuget/packages/",
+        "outputPath": "/Users/damian/Documents/Workshops/example-api/ExampleApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/damian/.nuget/NuGet/NuGet.Config"
+          "/Users/damian/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -69,7 +69,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -81,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }

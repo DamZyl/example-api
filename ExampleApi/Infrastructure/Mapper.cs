@@ -1,4 +1,3 @@
-using ExampleApi.Extensions;
 using ExampleApi.Models;
 using ExampleApi.Models.Enums;
 using ExampleApi.Models.ViewModels;
@@ -16,7 +15,7 @@ public static class Mapper
             Message = comment.Message,
             Author = comment.Author,
             Date = comment.Date,
-            Type = comment.Type.ToDisplayName(),
+            Type = comment.Type.DisplayName(),
         };
 
         return commentViewModel;
@@ -28,7 +27,7 @@ public static class Mapper
         {
             Key = (int) type,
             Value = type.ToString(),
-            EnumTypeName = type.ToDisplayName(),
+            EnumTypeName = type.DisplayName(),
         };
 
         return enumViewModel;

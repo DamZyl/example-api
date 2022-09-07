@@ -1,6 +1,7 @@
 using System.Net;
 using ExampleApi.Infrastructure;
 using ExampleApi.Models;
+using ExampleApi.Models.Enums;
 using ExampleApi.Models.Inputs;
 using ExampleApi.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -58,5 +59,26 @@ public class CommentController :  ControllerBase
         await _databaseContext.SaveChangesAsync(cancellationToken);
 
         return Created(string.Empty, new CreateCommentViewModel {CommentId = comment.Id});
+    }
+    
+    [Route("{commentId:guid}")]
+    [HttpPut]
+    [ProducesResponseType((int)HttpStatusCode.NoContent)]
+    public async Task<IActionResult> UpdateComment(Guid commentId, CancellationToken cancellationToken)
+    {
+        var comment = await _databaseContext.Comments.Where(x => x.Id == commentId)
+            .SingleOrDefaultAsync(cancellationToken);
+
+        if (comment is null)
+        {
+            throw new Exception("Error.");
+        }
+
+        comment.Type = comment.Type == CommentType.Positive ? CommentType.Negative : CommentType.Positive;
+
+        _databaseContext.Comments.Update(comment);
+        await _databaseContext.SaveChangesAsync(cancellationToken);
+
+        return NoContent();
     }
 }
