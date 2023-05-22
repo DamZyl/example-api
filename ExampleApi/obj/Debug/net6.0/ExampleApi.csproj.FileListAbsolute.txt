@@ -181,3 +181,4 @@
 /Users/damian/Documents/Workshops/example-api/ExampleApi/obj/Debug/net6.0/ExampleApi.pdb
 /Users/damian/Documents/Workshops/example-api/ExampleApi/obj/Debug/net6.0/ExampleApi.genruntimeconfig.cache
 /Users/damian/Documents/Workshops/example-api/ExampleApi/obj/Debug/net6.0/ref/ExampleApi.dll
+/Users/damian/Documents/Workshops/example-api/ExampleApi/bin/Debug/net6.0/Hellang.Middleware.ProblemDetails.dll

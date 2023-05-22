@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YZ7qX6tVs3mrp+WpNcCxqniSYH5Ly4lmmun6vvFp/5B6+DMRAeGTdlGtDKKHOIruv01jmVFRmaQuteTqVcwj6Q==",
+  "dgSpecHash": "fZYqjcZ0BCcnRTYZYeZc4yAEKSNaozzwl5pgQhsR/rJWsHPRTiGcgGkCAuPmqf8SpS2Mz/oQKe4BLRcn1sDayQ==",
   "success": true,
   "projectFilePath": "/Users/damian/Documents/Workshops/example-api/ExampleApi/ExampleApi.csproj",
   "expectedPackageFiles": [
+    "/Users/damian/.nuget/packages/hellang.middleware.problemdetails/6.5.1/hellang.middleware.problemdetails.6.5.1.nupkg.sha512",
     "/Users/damian/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/damian/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/damian/.nuget/packages/microsoft.data.sqlclient/2.1.4/microsoft.data.sqlclient.2.1.4.nupkg.sha512",
@@ -44,6 +45,7 @@
     "/Users/damian/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "/Users/damian/.nuget/packages/system.drawing.common/4.7.0/system.drawing.common.4.7.0.nupkg.sha512",
     "/Users/damian/.nuget/packages/system.identitymodel.tokens.jwt/6.8.0/system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
+    "/Users/damian/.nuget/packages/system.reflection.metadata/5.0.0/system.reflection.metadata.5.0.0.nupkg.sha512",
     "/Users/damian/.nuget/packages/system.runtime.caching/4.7.0/system.runtime.caching.4.7.0.nupkg.sha512",
     "/Users/damian/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/damian/.nuget/packages/system.security.accesscontrol/4.7.0/system.security.accesscontrol.4.7.0.nupkg.sha512",

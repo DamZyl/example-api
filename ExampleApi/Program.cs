@@ -1,9 +1,18 @@
 using ExampleApi.Infrastructure;
+using ExampleApi.Models.Exceptions;
+using Hellang.Middleware.ProblemDetails;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddProblemDetails(x =>
+{
+    x.Map<ValidationException>((ctx, ex) => new ValidationProblemDetails(ex, ctx));
+    x.Map<NotFoundException>((ctx, ex) => new NotFoundProblemDetails(ex, ctx));
+    x.Map<InternalServerException>((ctx, ex) => new InternalServerProblemDetails(ex, ctx));
+    x.Map<UnhandledException>((ctx, ex) => new UnhandledProblemDetails(ex, ctx));
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -26,6 +35,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseProblemDetails();
 app.UseCors("cors-policy");
 app.UseHttpsRedirection();
 

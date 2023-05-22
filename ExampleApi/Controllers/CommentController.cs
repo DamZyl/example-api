@@ -2,10 +2,12 @@ using System.Net;
 using ExampleApi.Infrastructure;
 using ExampleApi.Models;
 using ExampleApi.Models.Enums;
+using ExampleApi.Models.Exceptions;
 using ExampleApi.Models.Inputs;
 using ExampleApi.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ValidationException = ExampleApi.Models.Exceptions.ValidationException;
 
 namespace ExampleApi.Controllers;
 
@@ -59,6 +61,90 @@ public class CommentController :  ControllerBase
         await _databaseContext.SaveChangesAsync(cancellationToken);
 
         return Created(string.Empty, new CreateCommentViewModel {CommentId = comment.Id});
+    }
+    
+    [Route("Exception/Internal")]
+    [HttpPost]
+    [ProducesResponseType(typeof(CreateCommentViewModel), (int)HttpStatusCode.Created)]
+    public async Task<IActionResult> ThrowInternalException(CreateCommentInput request, CancellationToken cancellationToken)
+    {
+        var comment = new Comment
+        {
+            Id = Guid.NewGuid(),
+            Title = request.Title,
+            Message = request.Message,
+            Author = request.Author,
+            Date = request.Date,
+            Type = request.Type
+        };
+        
+        await _databaseContext.Comments.AddAsync(comment, cancellationToken);
+        await _databaseContext.SaveChangesAsync(cancellationToken);
+
+        throw new InternalServerException();
+    }
+    
+    [Route("Exception/NotFound")]
+    [HttpPost]
+    [ProducesResponseType(typeof(CreateCommentViewModel), (int)HttpStatusCode.Created)]
+    public async Task<IActionResult> ThrowNotFoundException(CreateCommentInput request, CancellationToken cancellationToken)
+    {
+        var comment = new Comment
+        {
+            Id = Guid.NewGuid(),
+            Title = request.Title,
+            Message = request.Message,
+            Author = request.Author,
+            Date = request.Date,
+            Type = request.Type
+        };
+        
+        await _databaseContext.Comments.AddAsync(comment, cancellationToken);
+        await _databaseContext.SaveChangesAsync(cancellationToken);
+
+        throw new NotFoundException();
+    }
+    
+    [Route("Exception/Unhandled")]
+    [HttpPost]
+    [ProducesResponseType(typeof(CreateCommentViewModel), (int)HttpStatusCode.Created)]
+    public async Task<IActionResult> ThrowUnhandledException(CreateCommentInput request, CancellationToken cancellationToken)
+    {
+        var comment = new Comment
+        {
+            Id = Guid.NewGuid(),
+            Title = request.Title,
+            Message = request.Message,
+            Author = request.Author,
+            Date = request.Date,
+            Type = request.Type
+        };
+        
+        await _databaseContext.Comments.AddAsync(comment, cancellationToken);
+        await _databaseContext.SaveChangesAsync(cancellationToken);
+
+        throw new UnhandledException();
+    }
+    
+    [Route("Exception/Validation")]
+    [HttpPost]
+    [ProducesResponseType(typeof(CreateCommentViewModel), (int)HttpStatusCode.Created)]
+    public async Task<IActionResult> ThrowValidationException(CreateCommentInput request, CancellationToken cancellationToken)
+    {
+        var comment = new Comment
+        {
+            Id = Guid.NewGuid(),
+            Title = request.Title,
+            Message = request.Message,
+            Author = request.Author,
+            Date = request.Date,
+            Type = request.Type
+        };
+        
+        await _databaseContext.Comments.AddAsync(comment, cancellationToken);
+        await _databaseContext.SaveChangesAsync(cancellationToken);
+
+        throw new ValidationException();
     }
     
     [Route("{commentId:guid}")]
