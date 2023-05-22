@@ -2,6 +2,8 @@ using System.Collections.Concurrent;
 using System.ComponentModel;
 using System.Reflection;
 
+namespace ExampleApi.Extensions;
+
 public static class EnumExtensions
 {
     private static readonly ConcurrentDictionary<string, string> DisplayNameCache = new();
@@ -10,7 +12,7 @@ public static class EnumExtensions
     {
         var key = $"{value.GetType().FullName}.{value}";
 
-        var displayName = DisplayNameCache.GetOrAdd(key, x =>
+        var displayName = DisplayNameCache.GetOrAdd(key, _ =>
         {
             var name = (DescriptionAttribute[])value
                 .GetType()

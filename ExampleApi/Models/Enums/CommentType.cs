@@ -4,8 +4,8 @@ namespace ExampleApi.Models.Enums;
 
 public enum CommentType
 {
-    [Description("Pozytywny")]
+    [Description("Positive")]
     Positive = 0,
-    [Description("Negatywny")]
+    [Description("Negative")]
     Negative
 }

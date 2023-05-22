@@ -1,3 +1,4 @@
+using ExampleApi.Extensions;
 using ExampleApi.Models;
 using ExampleApi.Models.Enums;
 using ExampleApi.Models.ViewModels;
